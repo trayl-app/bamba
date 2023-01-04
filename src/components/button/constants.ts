@@ -1,0 +1,6 @@
+export const VARIANT = Object.freeze({
+  PRIMARY: 'PRIMARY',
+  SECONDARY: 'SECONDARY',
+  TERTIARY: 'TERTIARY',
+  INVISIBLE: 'INVISIBLE',
+});
