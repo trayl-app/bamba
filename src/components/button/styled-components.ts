@@ -42,6 +42,7 @@ const getColorStyles = ({
           backgroundColor: theme.colors.buttonSecondaryActiveFill,
         },
         ':focus': {
+          boxShadow: theme.shadows.focus,
           backgroundColor: theme.colors.buttonSecondaryActiveFill,
         },
       };

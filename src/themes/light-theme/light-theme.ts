@@ -7,6 +7,7 @@ import { Theme } from '../types';
 import getComponentColorTokens from './color-component-tokens';
 import sizing from '../shared/sizing';
 import borders from '../shared/borders';
+import shadows from '../shared/shadows';
 
 export const LightTheme: Theme = {
   name: 'light-theme',
@@ -20,4 +21,5 @@ export const LightTheme: Theme = {
   typography: getTypography(),
   sizing,
   borders,
+  shadows,
 };

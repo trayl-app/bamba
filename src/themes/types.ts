@@ -117,6 +117,21 @@ export interface Borders {
   borderRadiusCircle: CSS.BorderRadius;
 }
 
+export interface Shadows {
+  shadow100: CSS.BoxShadow;
+  shadow200: CSS.BoxShadow;
+  shadow300: CSS.BoxShadow;
+  shadow400: CSS.BoxShadow;
+  shadow500: CSS.BoxShadow;
+  insetShadow100: CSS.BoxShadow;
+  insetShadow200: CSS.BoxShadow;
+  insetShadow300: CSS.BoxShadow;
+  insetShadow400: CSS.BoxShadow;
+  insetShadow500: CSS.BoxShadow;
+  highlight: CSS.BoxShadow;
+  focus: CSS.BoxShadow;
+}
+
 export interface Theme {
   name: string;
   colors: Colors;
@@ -125,4 +140,5 @@ export interface Theme {
   typography: Typography;
   sizing: Sizing;
   borders: Borders;
+  shadows: Shadows;
 }
