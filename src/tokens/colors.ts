@@ -2,18 +2,18 @@ import { ColorTokens } from './types';
 
 const colors: ColorTokens = {
   white: '#FFFFFF',
-  black: '#000000',
-  // Slate
-  slate50: '#F8FAFC',
-  slate100: '#F1F5F9',
-  slate200: '#E2E8F0',
-  slate300: '#CBD5E1',
-  slate400: '#94A3B8',
-  slate500: '#64748B',
-  slate600: '#475569',
-  slate700: '#334155',
-  slate800: '#1E293B',
-  slate900: '#0F172A',
+  black: '#1b1f24',
+  // Gray
+  gray50: '#f6f8fa',
+  gray100: '#eaeef2',
+  gray200: '#d0d7de',
+  gray300: '#afb8c1',
+  gray400: '#8c959f',
+  gray500: '#6e7781',
+  gray600: '#57606a',
+  gray700: '#424a53',
+  gray800: '#32383f',
+  gray900: '#24292f',
 };
 
 export default colors;

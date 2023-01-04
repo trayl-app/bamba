@@ -97,6 +97,26 @@ export interface Sizing {
   scale4800: string;
 }
 
+export interface Borders {
+  // Widths
+  border50: CSS.BorderWidth;
+  border100: CSS.BorderWidth;
+  border150: CSS.BorderWidth;
+  border200: CSS.BorderWidth;
+  border300: CSS.BorderWidth;
+  border400: CSS.BorderWidth;
+  border500: CSS.BorderWidth;
+  // Styles
+  borderStyle100: CSS.BorderStyle;
+  borderStyle200: CSS.BorderStyle;
+  // Radii
+  borderRadius100: CSS.BorderRadius;
+  borderRadius200: CSS.BorderRadius;
+  borderRadius300: CSS.BorderRadius;
+  borderRadius400: CSS.BorderRadius;
+  borderRadiusCircle: CSS.BorderRadius;
+}
+
 export interface Theme {
   name: string;
   colors: Colors;
@@ -104,4 +124,5 @@ export interface Theme {
   mediaQueries: MediaQueries;
   typography: Typography;
   sizing: Sizing;
+  borders: Borders;
 }

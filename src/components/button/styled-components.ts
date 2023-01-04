@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { VARIANT } from './constants';
-import { StyledButtonProps, Variant } from './types';
+import { SIZE, VARIANT } from './constants';
+import { Size, StyledButtonProps, Variant } from './types';
 import { Property as CSS } from 'csstype';
 
 /**
@@ -9,9 +9,10 @@ import { Property as CSS } from 'csstype';
  * ==============================
  */
 export const BaseButton = styled.button<Partial<StyledButtonProps>>(
-  ({ theme, $variant }) => ({
+  ({ theme, $variant, $size }) => ({
     cursor: 'pointer',
-    ...getPaddingStyles({ theme }),
+    ...getBorderStyles({ theme }),
+    ...getPaddingStyles({ theme, $size }),
     ...getColorStyles({ theme, $variant }),
     ...getBorderRadiusStyles({ theme }),
   })
@@ -30,7 +31,7 @@ const getColorStyles = ({
   $variant?: Variant;
 }): ColorStyles => {
   switch ($variant) {
-    case VARIANT.SECONDARY:
+    case VARIANT.secondary:
       return {
         color: theme.colors.buttonSecondaryText,
         backgroundColor: theme.colors.buttonSecondaryFill,
@@ -51,13 +52,46 @@ const getColorStyles = ({
 
 const getPaddingStyles = ({
   theme,
+  $size,
 }: {
   theme: DefaultTheme;
-}): PaddingStyles => ({
-  paddingLeft: theme.sizing.scale500,
-  paddingRight: theme.sizing.scale500,
-  paddingTop: theme.sizing.scale100,
-  paddingBottom: theme.sizing.scale100,
+  $size?: Size;
+}): PaddingStyles => {
+  switch ($size) {
+    case SIZE.mini:
+      return {
+        paddingLeft: theme.sizing.scale300,
+        paddingRight: theme.sizing.scale300,
+        paddingTop: theme.sizing.scale0,
+        paddingBottom: theme.sizing.scale0,
+      };
+    case SIZE.compact:
+      return {
+        paddingLeft: theme.sizing.scale500,
+        paddingRight: theme.sizing.scale500,
+        paddingTop: theme.sizing.scale100,
+        paddingBottom: theme.sizing.scale100,
+      };
+    case SIZE.large:
+      return {
+        paddingLeft: theme.sizing.scale700,
+        paddingRight: theme.sizing.scale700,
+        paddingTop: theme.sizing.scale400,
+        paddingBottom: theme.sizing.scale400,
+      };
+    default:
+      return {
+        paddingLeft: theme.sizing.scale600,
+        paddingRight: theme.sizing.scale600,
+        paddingTop: theme.sizing.scale300,
+        paddingBottom: theme.sizing.scale300,
+      };
+  }
+};
+
+const getBorderStyles = ({ theme }: { theme: DefaultTheme }) => ({
+  borderWidth: theme.borders.border100,
+  borderStyle: theme.borders.borderStyle100,
 });
 
 const getBorderRadiusStyles = ({

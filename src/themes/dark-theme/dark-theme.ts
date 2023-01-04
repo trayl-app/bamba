@@ -6,6 +6,7 @@ import getTypography from '../shared/typography';
 import { Theme } from '../types';
 import getComponentColorTokens from './color-component-tokens';
 import sizing from '../shared/sizing';
+import borders from '../shared/borders';
 
 export const DarkTheme: Theme = {
   name: 'dark-theme',
@@ -18,4 +19,5 @@ export const DarkTheme: Theme = {
   },
   typography: getTypography(),
   sizing,
+  borders,
 };

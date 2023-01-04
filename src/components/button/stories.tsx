@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Storybook from '@storybook/react';
 import Button from './button';
 import { ButtonProps } from './types';
-import { VARIANT } from './constants';
+import { SIZE, VARIANT } from './constants';
 import { defaultProps } from './default-props';
 
 const meta: Storybook.Meta<ButtonProps> = {
@@ -10,6 +10,7 @@ const meta: Storybook.Meta<ButtonProps> = {
   component: Button,
   args: {
     variant: defaultProps.variant,
+    size: defaultProps.size,
     children: 'Button',
   },
   argTypes: {
@@ -22,6 +23,17 @@ const meta: Storybook.Meta<ButtonProps> = {
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: defaultProps.variant },
+      },
+    },
+    size: {
+      control: { type: 'select' },
+      options: Object.keys(SIZE),
+      description: 'The size of the button',
+      name: 'size',
+      type: { name: 'string', required: false },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: defaultProps.size },
       },
     },
     children: {

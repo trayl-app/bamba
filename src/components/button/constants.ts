@@ -1,6 +1,18 @@
 export const VARIANT = Object.freeze({
-  PRIMARY: 'PRIMARY',
-  SECONDARY: 'SECONDARY',
-  TERTIARY: 'TERTIARY',
-  INVISIBLE: 'INVISIBLE',
+  primary: 'primary',
+  secondary: 'secondary',
+  tertiary: 'tertiary',
+  invisible: 'invisible',
+});
+
+export const SIZE = Object.freeze({
+  mini: 'mini',
+  default: 'default',
+  compact: 'compact',
+  large: 'large',
+});
+
+export const SHAPE = Object.freeze({
+  default: 'default',
+  pill: 'pill',
 });

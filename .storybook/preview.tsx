@@ -12,15 +12,13 @@ export const parameters = {
 };
 
 const ThemeBlock = styled.div<{ fill?: boolean }>(
-  ({ fill, theme }) =>
+  ({ theme }) =>
     css`
-      position: absolute;
-      top: 0;
-      width: ${fill ? '100vw' : '50vw'};
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      bottom: 0;
-      overflow: auto;
-      padding: 1rem;
       background: ${theme.colors.backgroundPrimary};
     `
 );
@@ -32,7 +30,7 @@ const withTheme: DecoratorFn = (Story, context) => {
 
   return (
     <ThemeProvider theme={storyTheme}>
-      <ThemeBlock fill>
+      <ThemeBlock>
         <Story />
       </ThemeBlock>
     </ThemeProvider>

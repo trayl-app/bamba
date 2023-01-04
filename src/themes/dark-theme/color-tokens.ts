@@ -4,16 +4,16 @@ import { ColorTokens } from '../types';
 const darkColorTokens: ColorTokens = {
   white: colors.white,
   black: colors.black,
-  mono100: colors.white,
-  mono200: colors.slate100,
-  mono300: colors.slate200,
-  mono400: colors.slate300,
-  mono500: colors.slate400,
-  mono600: colors.slate500,
-  mono700: colors.slate600,
-  mono800: colors.slate700,
-  mono900: colors.slate800,
-  mono1000: colors.slate900,
+  mono100: colors.gray50,
+  mono200: colors.gray100,
+  mono300: colors.gray200,
+  mono400: colors.gray300,
+  mono500: colors.gray400,
+  mono600: colors.gray500,
+  mono700: colors.gray600,
+  mono800: colors.gray700,
+  mono900: colors.gray800,
+  mono1000: colors.gray900,
 };
 
 export default darkColorTokens;

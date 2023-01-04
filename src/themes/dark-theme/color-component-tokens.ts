@@ -4,18 +4,18 @@ import darkColorTokens from './color-tokens';
 const getComponentColorTokens = (
   foundation: ColorTokens = darkColorTokens
 ): ComponentColorTokens => ({
-  buttonSecondaryFill: foundation.mono100,
-  buttonSecondaryText: foundation.mono800,
-  buttonSecondaryBorder: foundation.mono400,
-  buttonSecondaryHoverFill: foundation.mono200,
-  buttonSecondaryHoverText: foundation.mono800,
-  buttonSecondaryHoverBorder: foundation.mono500,
-  buttonSecondaryActiveBorder: foundation.mono600,
-  buttonSecondarySelectedFill: foundation.mono300,
-  buttonSecondarySelectedText: foundation.mono800,
-  buttonSecondarySelectedBorder: foundation.mono600,
-  buttonSecondaryActiveFill: foundation.mono300,
-  buttonSecondaryActiveText: foundation.mono800,
+  buttonSecondaryFill: foundation.mono1000,
+  buttonSecondaryText: foundation.mono200,
+  buttonSecondaryBorder: foundation.mono500,
+  buttonSecondaryHoverFill: foundation.mono900,
+  buttonSecondaryHoverText: foundation.mono200,
+  buttonSecondaryHoverBorder: foundation.mono400,
+  buttonSecondarySelectedFill: foundation.mono900,
+  buttonSecondarySelectedText: foundation.mono200,
+  buttonSecondarySelectedBorder: foundation.mono500,
+  buttonSecondaryActiveFill: foundation.mono1000,
+  buttonSecondaryActiveText: foundation.mono200,
+  buttonSecondaryActiveBorder: foundation.mono500,
 });
 
 export default getComponentColorTokens;

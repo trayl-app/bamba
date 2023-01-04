@@ -5,16 +5,16 @@ const getComponentColorTokens = (
   foundation: ColorTokens = lightColorTokens
 ): ComponentColorTokens => ({
   buttonSecondaryFill: foundation.mono100,
-  buttonSecondaryText: foundation.mono800,
+  buttonSecondaryText: foundation.black,
   buttonSecondaryBorder: foundation.mono400,
   buttonSecondaryHoverFill: foundation.mono200,
-  buttonSecondaryHoverText: foundation.mono800,
+  buttonSecondaryHoverText: foundation.black,
   buttonSecondaryHoverBorder: foundation.mono500,
   buttonSecondaryActiveFill: foundation.mono300,
-  buttonSecondaryActiveText: foundation.mono800,
+  buttonSecondaryActiveText: foundation.black,
   buttonSecondaryActiveBorder: foundation.mono600,
   buttonSecondarySelectedFill: foundation.mono300,
-  buttonSecondarySelectedText: foundation.mono800,
+  buttonSecondarySelectedText: foundation.black,
   buttonSecondarySelectedBorder: foundation.mono600,
 });
 
