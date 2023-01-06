@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -11,15 +11,18 @@
     "node": ">=10"
   },
   "scripts": {
+    "ci": "yarn install --immutable --immutable-cache --check-cache",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "release": "yarn build && changeset publish",
+    "version": "changeset version"
   },
   "peerDependencies": {
     "react": ">=16",
@@ -27,10 +30,8 @@
     "react-is": ">=16",
     "styled-components": ">=5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": "eslint --fix"
   },
   "prettier": {
     "printWidth": 80,
@@ -38,8 +39,10 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "bamba",
-  "author": "ocintnaf",
+  "name": "@trayl-app/bamba",
+  "author": {
+    "name": "ocintnaf"
+  },
   "module": "dist/bamba.esm.js",
   "size-limit": [
     {
@@ -53,6 +56,7 @@
   ],
   "devDependencies": {
     "@babel/core": "7.19.6",
+    "@changesets/cli": "2.26.0",
     "@size-limit/preset-small-lib": "8.1.0",
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/addon-info": "5.3.21",
@@ -64,7 +68,8 @@
     "@types/styled-components": "5.1.26",
     "babel-loader": "8.2.5",
     "csstype": "3.1.1",
-    "husky": "8.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "13.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
