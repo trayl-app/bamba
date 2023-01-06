@@ -15,7 +15,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
@@ -27,10 +27,8 @@
     "react-is": ">=16",
     "styled-components": ">=5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": "eslint --fix"
   },
   "prettier": {
     "printWidth": 80,
@@ -64,7 +62,8 @@
     "@types/styled-components": "5.1.26",
     "babel-loader": "8.2.5",
     "csstype": "3.1.1",
-    "husky": "8.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "13.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
