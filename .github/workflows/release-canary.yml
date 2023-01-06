@@ -33,7 +33,7 @@ jobs:
       - name: Create Release Pull Request or publish to NPM
         uses: changesets/action@v1
         with:
-          version: yarn version:snapshot
+          version: yarn version:snapshot --no-git-tag-version
           publish: yarn release --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

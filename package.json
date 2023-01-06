@@ -27,7 +27,8 @@
     "version:patch": "yarn version --patch",
     "version:minor": "yarn version --minor",
     "version:major": "yarn version --major",
-    "version:snapshot": "yarn version --snapshot"
+    "version:snapshot": "yarn version --snapshot",
+    "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
     "react": ">=16",
