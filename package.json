@@ -23,7 +23,11 @@
     "build-storybook": "build-storybook",
     "release": "changeset publish",
     "prerelease": "yarn build",
-    "version-packages": "changeset version"
+    "version": "changeset version",
+    "version:patch": "yarn version --patch",
+    "version:minor": "yarn version --minor",
+    "version:major": "yarn version --major",
+    "version:snapshot": "yarn version --snapshot"
   },
   "peerDependencies": {
     "react": ">=16",
