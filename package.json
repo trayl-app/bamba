@@ -20,7 +20,10 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "release": "changeset publish",
+    "prerelease": "yarn build",
+    "version-packages": "changeset version"
   },
   "peerDependencies": {
     "react": ">=16",
@@ -38,7 +41,9 @@
     "trailingComma": "es5"
   },
   "name": "bamba",
-  "author": "ocintnaf",
+  "author": {
+    "name": "ocintnaf"
+  },
   "module": "dist/bamba.esm.js",
   "size-limit": [
     {
@@ -52,6 +57,7 @@
   ],
   "devDependencies": {
     "@babel/core": "7.19.6",
+    "@changesets/cli": "2.26.0",
     "@size-limit/preset-small-lib": "8.1.0",
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/addon-info": "5.3.21",

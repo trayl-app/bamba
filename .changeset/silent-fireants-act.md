@@ -1,0 +1,5 @@
+---
+'bamba': patch
+---
+
+Initial setup
