@@ -39,7 +39,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "bamba",
+  "name": "@trayl-app/bamba",
   "author": {
     "name": "ocintnaf"
   },
