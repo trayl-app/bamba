@@ -11,6 +11,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "ci": "yarn install --immutable --immutable-cache --check-cache",
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
