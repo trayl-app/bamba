@@ -21,14 +21,8 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "release": "changeset publish",
-    "prerelease": "yarn build",
-    "version": "changeset version",
-    "version:patch": "yarn version --patch",
-    "version:minor": "yarn version --minor",
-    "version:major": "yarn version --major",
-    "version:snapshot": "yarn version --snapshot",
-    "postversion": "git push && git push --tags"
+    "release": "yarn build && changeset publish",
+    "version": "changeset version"
   },
   "peerDependencies": {
     "react": ">=16",

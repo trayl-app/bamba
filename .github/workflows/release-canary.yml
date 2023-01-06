@@ -30,11 +30,10 @@ jobs:
       - name: Install dependencies
         run: yarn ci
 
-      - name: Create Release Pull Request or publish to NPM
-        uses: changesets/action@v1
-        with:
-          version: yarn version:snapshot --no-git-tag-version
-          publish: yarn release --tag canary
+      - name: Publish canary release
+        run: |
+          yarn changeset version --snapshot
+          yarn changeset publish --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
