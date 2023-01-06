@@ -8,12 +8,14 @@ import getComponentColorTokens from './color-component-tokens';
 import sizing from '../shared/sizing';
 import borders from '../shared/borders';
 import shadows from '../shared/shadows';
+import { colors as foundationColors } from '../../tokens';
 
 export const DarkTheme: Theme = {
   name: 'dark-theme',
   breakpoints,
   mediaQueries,
   colors: {
+    ...foundationColors,
     ...darkColorTokens,
     ...getSemanticColorTokens(),
     ...getComponentColorTokens(),

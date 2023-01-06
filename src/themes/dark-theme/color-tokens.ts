@@ -14,6 +14,16 @@ const darkColorTokens: ColorTokens = {
   mono800: colors.gray700,
   mono900: colors.gray800,
   mono1000: colors.gray900,
+  primary50: colors.blue50,
+  primary100: colors.blue100,
+  primary200: colors.blue200,
+  primary300: colors.blue300,
+  primary400: colors.blue400,
+  primary500: colors.blue500,
+  primary600: colors.blue600,
+  primary700: colors.blue700,
+  primary800: colors.blue800,
+  primary900: colors.blue900,
 };
 
 export default darkColorTokens;

@@ -1,4 +1,5 @@
 import { Property as CSS } from 'csstype';
+import { ColorTokens as FoundationColorTokens } from '../tokens';
 
 export interface ColorTokens {
   // Monochrome Palette
@@ -14,6 +15,17 @@ export interface ColorTokens {
   mono800: string;
   mono900: string;
   mono1000: string;
+  // Primary Palette
+  primary50: string;
+  primary100: string;
+  primary200: string;
+  primary300: string;
+  primary400: string;
+  primary500: string;
+  primary600: string;
+  primary700: string;
+  primary800: string;
+  primary900: string;
 }
 
 export interface CoreSemanticColorTokens {
@@ -24,6 +36,7 @@ export type SemanticColorTokens = {} & CoreSemanticColorTokens;
 
 export interface ComponentColorTokens {
   // Button
+  // Secondary
   buttonSecondaryFill: CSS.BackgroundColor;
   buttonSecondaryText: CSS.Color;
   buttonSecondaryBorder: CSS.BorderColor;
@@ -36,6 +49,25 @@ export interface ComponentColorTokens {
   buttonSecondarySelectedFill: CSS.BackgroundColor;
   buttonSecondarySelectedText: CSS.Color;
   buttonSecondarySelectedBorder: CSS.BorderColor;
+  buttonSecondaryDisabledFill: CSS.BackgroundColor;
+  buttonSecondaryDisabledText: CSS.Color;
+  buttonSecondaryDisabledBorder: CSS.BorderColor;
+  // Tertiary
+  buttonTertiaryFill: CSS.BackgroundColor;
+  buttonTertiaryText: CSS.Color;
+  buttonTertiaryBorder: CSS.BorderColor;
+  buttonTertiaryHoverFill: CSS.BackgroundColor;
+  buttonTertiaryHoverText: CSS.Color;
+  buttonTertiaryHoverBorder: CSS.BorderColor;
+  buttonTertiaryActiveFill: CSS.BackgroundColor;
+  buttonTertiaryActiveText: CSS.Color;
+  buttonTertiaryActiveBorder: CSS.BorderColor;
+  buttonTertiarySelectedFill: CSS.BackgroundColor;
+  buttonTertiarySelectedText: CSS.Color;
+  buttonTertiarySelectedBorder: CSS.BorderColor;
+  buttonTertiaryDisabledFill: CSS.BackgroundColor;
+  buttonTertiaryDisabledText: CSS.Color;
+  buttonTertiaryDisabledBorder: CSS.BorderColor;
 }
 
 export interface Breakpoints {
@@ -51,6 +83,7 @@ export type MediaQueries = {
 };
 
 export type Colors = {} & ColorTokens &
+  FoundationColorTokens &
   SemanticColorTokens &
   ComponentColorTokens;
 
@@ -69,6 +102,10 @@ export interface Typography {
   font100: Font;
   font150: Font;
   font200: Font;
+  font250: Font;
+  font300: Font;
+  font350: Font;
+  font400: Font;
   ParagraphXSmall: Font;
 }
 

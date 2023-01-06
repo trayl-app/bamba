@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Storybook from '@storybook/react';
 import Button from './button';
 import { ButtonProps } from './types';
-import { SIZE, VARIANT } from './constants';
+import { SHAPE, SIZE, VARIANT } from './constants';
 import { defaultProps } from './default-props';
 
 const meta: Storybook.Meta<ButtonProps> = {
@@ -11,6 +11,8 @@ const meta: Storybook.Meta<ButtonProps> = {
   args: {
     variant: defaultProps.variant,
     size: defaultProps.size,
+    shape: defaultProps.shape,
+    isDisabled: defaultProps.isDisabled,
     children: 'Button',
   },
   argTypes: {
@@ -34,6 +36,27 @@ const meta: Storybook.Meta<ButtonProps> = {
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: defaultProps.size },
+      },
+    },
+    shape: {
+      control: { type: 'select' },
+      options: Object.keys(SHAPE),
+      description: 'The shape of the button',
+      name: 'shape',
+      type: { name: 'string', required: false },
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: defaultProps.shape },
+      },
+    },
+    isDisabled: {
+      control: { type: 'boolean' },
+      description: 'Whether the button is disabled',
+      name: 'isDisabled',
+      type: { name: 'boolean', required: false },
+      table: {
+        type: { summary: 'boolean' },
+        defaultValue: { summary: defaultProps.isDisabled },
       },
     },
     children: {

@@ -1,6 +1,6 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { SIZE, VARIANT } from './constants';
-import { Size, StyledButtonProps, Variant } from './types';
+import { SHAPE, SIZE, VARIANT } from './constants';
+import { Shape, Size, StyledButtonProps, Variant } from './types';
 import { Property as CSS } from 'csstype';
 
 /**
@@ -9,12 +9,17 @@ import { Property as CSS } from 'csstype';
  * ==============================
  */
 export const BaseButton = styled.button<Partial<StyledButtonProps>>(
-  ({ theme, $variant, $size }) => ({
+  ({ theme, $variant, $size, $shape }) => ({
     cursor: 'pointer',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    outline: 'none',
+    transition: 'all 0.2s ease-in-out',
     ...getBorderStyles({ theme }),
     ...getPaddingStyles({ theme, $size }),
     ...getColorStyles({ theme, $variant }),
-    ...getBorderRadiusStyles({ theme }),
+    ...getBorderRadiusStyles({ theme, $shape }),
   })
 );
 
@@ -35,15 +40,38 @@ const getColorStyles = ({
       return {
         color: theme.colors.buttonSecondaryText,
         backgroundColor: theme.colors.buttonSecondaryFill,
+        borderColor: theme.colors.buttonSecondaryBorder,
         ':hover': {
           backgroundColor: theme.colors.buttonSecondaryHoverFill,
+          borderColor: theme.colors.buttonSecondaryHoverBorder,
         },
         ':active': {
           backgroundColor: theme.colors.buttonSecondaryActiveFill,
+          borderColor: theme.colors.buttonSecondaryActiveBorder,
         },
         ':focus': {
           boxShadow: theme.shadows.focus,
           backgroundColor: theme.colors.buttonSecondaryActiveFill,
+          borderColor: theme.colors.buttonSecondaryActiveBorder,
+        },
+      };
+    case VARIANT.tertiary:
+      return {
+        color: theme.colors.buttonTertiaryText,
+        backgroundColor: theme.colors.buttonTertiaryFill,
+        borderColor: theme.colors.buttonTertiaryBorder,
+        ':hover': {
+          backgroundColor: theme.colors.buttonTertiaryHoverFill,
+          borderColor: theme.colors.buttonTertiaryHoverBorder,
+        },
+        ':active': {
+          backgroundColor: theme.colors.buttonTertiaryActiveFill,
+          borderColor: theme.colors.buttonTertiaryActiveBorder,
+        },
+        ':focus': {
+          boxShadow: theme.shadows.focus,
+          backgroundColor: theme.colors.buttonTertiaryActiveFill,
+          borderColor: theme.colors.buttonTertiaryActiveBorder,
         },
       };
     default:
@@ -97,14 +125,28 @@ const getBorderStyles = ({ theme }: { theme: DefaultTheme }) => ({
 
 const getBorderRadiusStyles = ({
   theme,
+  $shape,
 }: {
   theme: DefaultTheme;
-}): BorderRadiusStyles => ({
-  borderTopLeftRadius: theme.sizing.scale200,
-  borderTopRightRadius: theme.sizing.scale200,
-  borderBottomLeftRadius: theme.sizing.scale200,
-  borderBottomRightRadius: theme.sizing.scale200,
-});
+  $shape?: Shape;
+}): BorderRadiusStyles => {
+  switch ($shape) {
+    case SHAPE.pill:
+      return {
+        borderTopLeftRadius: theme.sizing.scale1000,
+        borderTopRightRadius: theme.sizing.scale1000,
+        borderBottomLeftRadius: theme.sizing.scale1000,
+        borderBottomRightRadius: theme.sizing.scale1000,
+      };
+    default:
+      return {
+        borderTopLeftRadius: theme.sizing.scale200,
+        borderTopRightRadius: theme.sizing.scale200,
+        borderBottomLeftRadius: theme.sizing.scale200,
+        borderBottomRightRadius: theme.sizing.scale200,
+      };
+  }
+};
 
 /**
  * ==============================
@@ -114,17 +156,21 @@ const getBorderRadiusStyles = ({
 interface ColorStyles {
   color?: CSS.Color;
   backgroundColor?: CSS.BackgroundColor;
+  borderColor?: CSS.BorderColor;
   ':hover'?: {
     boxShadow?: CSS.BoxShadow;
     backgroundColor?: CSS.BackgroundColor;
+    borderColor?: CSS.BorderColor;
   };
   ':active'?: {
     boxShadow?: CSS.BoxShadow;
     backgroundColor?: CSS.BackgroundColor;
+    borderColor?: CSS.BorderColor;
   };
   ':focus'?: {
     boxShadow?: CSS.BoxShadow;
     backgroundColor?: CSS.BackgroundColor;
+    borderColor?: CSS.BorderColor;
   };
 }
 

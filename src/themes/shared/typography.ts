@@ -28,10 +28,42 @@ const getTypography = (
     lineHeight: '24px',
   };
 
+  const font250: Font = {
+    fontFamily: fontTokens.fontFamily,
+    fontWeight: 'normal',
+    fontSize: '18px',
+    lineHeight: '28px',
+  };
+
+  const font300: Font = {
+    fontFamily: fontTokens.fontFamily,
+    fontWeight: 'normal',
+    fontSize: '20px',
+    lineHeight: '28px',
+  };
+
+  const font350: Font = {
+    fontFamily: fontTokens.fontFamily,
+    fontWeight: 'normal',
+    fontSize: '22px',
+    lineHeight: '28px',
+  };
+
+  const font400: Font = {
+    fontFamily: fontTokens.fontFamily,
+    fontWeight: 'normal',
+    fontSize: '24px',
+    lineHeight: '32px',
+  };
+
   return {
     font100,
     font150,
     font200,
+    font250,
+    font300,
+    font350,
+    font400,
 
     ParagraphXSmall: font100,
   };

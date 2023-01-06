@@ -12,4 +12,26 @@ export interface ColorTokens {
   gray700: string;
   gray800: string;
   gray900: string;
+  // Blue
+  blue50: string;
+  blue100: string;
+  blue200: string;
+  blue300: string;
+  blue400: string;
+  blue500: string;
+  blue600: string;
+  blue700: string;
+  blue800: string;
+  blue900: string;
+  // Red
+  red50: string;
+  red100: string;
+  red200: string;
+  red300: string;
+  red400: string;
+  red500: string;
+  red600: string;
+  red700: string;
+  red800: string;
+  red900: string;
 }
