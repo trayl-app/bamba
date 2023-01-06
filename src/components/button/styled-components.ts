@@ -36,6 +36,24 @@ const getColorStyles = ({
   $variant?: Variant;
 }): ColorStyles => {
   switch ($variant) {
+    case VARIANT.primary:
+      return {
+        color: theme.colors.buttonPrimaryText,
+        backgroundColor: theme.colors.buttonPrimaryFill,
+        borderColor: theme.colors.buttonPrimaryBorder,
+        ':hover': {
+          backgroundColor: theme.colors.buttonPrimaryHoverFill,
+          borderColor: theme.colors.buttonPrimaryHoverBorder,
+        },
+        ':active': {
+          backgroundColor: theme.colors.buttonPrimaryActiveFill,
+          borderColor: theme.colors.buttonPrimaryActiveBorder,
+        },
+        ':focus': {
+          backgroundColor: theme.colors.buttonPrimaryActiveFill,
+          borderColor: theme.colors.buttonPrimaryActiveBorder,
+        },
+      };
     case VARIANT.secondary:
       return {
         color: theme.colors.buttonSecondaryText,
@@ -50,7 +68,6 @@ const getColorStyles = ({
           borderColor: theme.colors.buttonSecondaryActiveBorder,
         },
         ':focus': {
-          boxShadow: theme.shadows.focus,
           backgroundColor: theme.colors.buttonSecondaryActiveFill,
           borderColor: theme.colors.buttonSecondaryActiveBorder,
         },
@@ -69,7 +86,6 @@ const getColorStyles = ({
           borderColor: theme.colors.buttonTertiaryActiveBorder,
         },
         ':focus': {
-          boxShadow: theme.shadows.focus,
           backgroundColor: theme.colors.buttonTertiaryActiveFill,
           borderColor: theme.colors.buttonTertiaryActiveBorder,
         },
