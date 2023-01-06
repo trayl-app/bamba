@@ -1,7 +1,7 @@
 import { ColorTokens } from './types';
 
 const colors: ColorTokens = {
-  white: '#FFFFFF',
+  white: '#ffffff',
   black: '#1b1f24',
   // Gray
   gray50: '#f6f8fa',
@@ -36,6 +36,28 @@ const colors: ColorTokens = {
   red700: '#82071e',
   red800: '#660018',
   red900: '#4c0014',
+  // Green
+  green50: '#dafbe1',
+  green100: '#aceebb',
+  green200: '#6fdd8b',
+  green300: '#4ac26b',
+  green400: '#2da44e',
+  green500: '#1a7f37',
+  green600: '#116329',
+  green700: '#044f1e',
+  green800: '#003d16',
+  green900: '#002d11',
+  // Yellow
+  yellow50: '#fff8c5',
+  yellow100: '#fae17d',
+  yellow200: '#eac54f',
+  yellow300: '#d4a72c',
+  yellow400: '#bf8700',
+  yellow500: '#9a6700',
+  yellow600: '#7d4e00',
+  yellow700: '#633c01',
+  yellow800: '#4d2d00',
+  yellow900: '#3b2300',
 };
 
 export default colors;

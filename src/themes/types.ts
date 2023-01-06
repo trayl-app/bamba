@@ -24,18 +24,87 @@ export interface ColorTokens {
   primary500: string;
   primary600: string;
   primary700: string;
-  primary800: string;
-  primary900: string;
+  // Accent Palette
+  accent: string;
+  accent50: string;
+  accent100: string;
+  accent200: string;
+  accent300: string;
+  accent400: string;
+  accent500: string;
+  accent600: string;
+  accent700: string;
+  // Alert Palette
+  negative: string;
+  negative50: string;
+  negative100: string;
+  negative200: string;
+  negative300: string;
+  negative400: string;
+  negative500: string;
+  negative600: string;
+  negative700: string;
+  // Warning Palette
+  warning: string;
+  warning50: string;
+  warning100: string;
+  warning200: string;
+  warning300: string;
+  warning400: string;
+  warning500: string;
+  warning600: string;
+  warning700: string;
+  // Success Palette
+  positive: string;
+  positive50: string;
+  positive100: string;
+  positive200: string;
+  positive300: string;
+  positive400: string;
+  positive500: string;
+  positive600: string;
+  positive700: string;
 }
 
 export interface CoreSemanticColorTokens {
+  // Background
   backgroundPrimary: CSS.BackgroundColor;
+  backgroundSecondary: CSS.BackgroundColor;
+  backgroundTertiary: CSS.BackgroundColor;
+  backgroundInversePrimary: CSS.BackgroundColor;
+  backgroundInverseSecondary: CSS.BackgroundColor;
+  backgroundInverseTertiary: CSS.BackgroundColor;
+  // Content
+  contentPrimary: CSS.Color;
+  contentSecondary: CSS.Color;
+  contentTertiary: CSS.Color;
+  contentInversePrimary: CSS.Color;
+  contentInverseSecondary: CSS.Color;
+  contentInverseTertiary: CSS.Color;
+  // Border
+  borderOpaque: CSS.BorderColor;
+  borderTransparent: CSS.BorderColor;
+  borderInverseOpaque: CSS.BorderColor;
+  borderInverseTransparent: CSS.BorderColor;
 }
 
 export type SemanticColorTokens = {} & CoreSemanticColorTokens;
 
 export interface ComponentColorTokens {
   // Button
+  // Primary
+  buttonPrimaryFill: CSS.BackgroundColor;
+  buttonPrimaryText: CSS.Color;
+  buttonPrimaryBorder: CSS.BorderColor;
+  buttonPrimaryHoverFill: CSS.BackgroundColor;
+  buttonPrimaryHoverText: CSS.Color;
+  buttonPrimaryHoverBorder: CSS.BorderColor;
+  buttonPrimaryActiveFill: CSS.BackgroundColor;
+  buttonPrimaryActiveText: CSS.Color;
+  buttonPrimaryActiveBorder: CSS.BorderColor;
+  buttonPrimarySelectedFill: CSS.BackgroundColor;
+  buttonPrimarySelectedText: CSS.Color;
+  buttonPrimarySelectedBorder: CSS.BorderColor;
   // Secondary
   buttonSecondaryFill: CSS.BackgroundColor;
   buttonSecondaryText: CSS.Color;
@@ -49,9 +118,6 @@ export interface ComponentColorTokens {
   buttonSecondarySelectedFill: CSS.BackgroundColor;
   buttonSecondarySelectedText: CSS.Color;
   buttonSecondarySelectedBorder: CSS.BorderColor;
-  buttonSecondaryDisabledFill: CSS.BackgroundColor;
-  buttonSecondaryDisabledText: CSS.Color;
-  buttonSecondaryDisabledBorder: CSS.BorderColor;
   // Tertiary
   buttonTertiaryFill: CSS.BackgroundColor;
   buttonTertiaryText: CSS.Color;
@@ -65,9 +131,10 @@ export interface ComponentColorTokens {
   buttonTertiarySelectedFill: CSS.BackgroundColor;
   buttonTertiarySelectedText: CSS.Color;
   buttonTertiarySelectedBorder: CSS.BorderColor;
-  buttonTertiaryDisabledFill: CSS.BackgroundColor;
-  buttonTertiaryDisabledText: CSS.Color;
-  buttonTertiaryDisabledBorder: CSS.BorderColor;
+  // Disabled
+  buttonDisabledFill: CSS.BackgroundColor;
+  buttonDisabledText: CSS.Color;
+  buttonDisabledBorder: CSS.BorderColor;
 }
 
 export interface Breakpoints {
@@ -106,7 +173,32 @@ export interface Typography {
   font300: Font;
   font350: Font;
   font400: Font;
+  font450: Font;
+  font500: Font;
+  font550: Font;
+  font600: Font;
+  font650: Font;
+  font700: Font;
+  font750: Font;
+  font800: Font;
+  font850: Font;
+  font900: Font;
+  font950: Font;
+  font1000: Font;
   ParagraphXSmall: Font;
+  ParagraphSmall: Font;
+  ParagraphMedium: Font;
+  ParagraphLarge: Font;
+  LabelXSmall: Font;
+  LabelSmall: Font;
+  LabelMedium: Font;
+  LabelLarge: Font;
+  HeadingXSmall: Font;
+  HeadingSmall: Font;
+  HeadingMedium: Font;
+  HeadingLarge: Font;
+  HeadingXLarge: Font;
+  HeadingXXLarge: Font;
 }
 
 export interface Sizing {
@@ -160,13 +252,16 @@ export interface Shadows {
   shadow300: CSS.BoxShadow;
   shadow400: CSS.BoxShadow;
   shadow500: CSS.BoxShadow;
-  insetShadow100: CSS.BoxShadow;
-  insetShadow200: CSS.BoxShadow;
-  insetShadow300: CSS.BoxShadow;
-  insetShadow400: CSS.BoxShadow;
-  insetShadow500: CSS.BoxShadow;
-  highlight: CSS.BoxShadow;
-  focus: CSS.BoxShadow;
+  overlay0: CSS.BoxShadow;
+  overlay100: CSS.BoxShadow;
+  overlay200: CSS.BoxShadow;
+  overlay300: CSS.BoxShadow;
+  overlay400: CSS.BoxShadow;
+  overlay500: CSS.BoxShadow;
+  shallowAbove: CSS.BoxShadow;
+  shallowBelow: CSS.BoxShadow;
+  deepAbove: CSS.BoxShadow;
+  deepBelow: CSS.BoxShadow;
 }
 
 export interface Theme {

@@ -5,6 +5,19 @@ const getComponentColorTokens = (
   foundation: ColorTokens = darkColorTokens
 ): ComponentColorTokens => ({
   // Button
+  // Primary
+  buttonPrimaryFill: foundation.primary500,
+  buttonPrimaryText: foundation.white,
+  buttonPrimaryBorder: foundation.primary500,
+  buttonPrimaryHoverFill: foundation.primary600,
+  buttonPrimaryHoverText: foundation.white,
+  buttonPrimaryHoverBorder: foundation.primary600,
+  buttonPrimaryActiveFill: foundation.primary700,
+  buttonPrimaryActiveText: foundation.white,
+  buttonPrimaryActiveBorder: foundation.primary700,
+  buttonPrimarySelectedFill: foundation.primary700,
+  buttonPrimarySelectedText: foundation.white,
+  buttonPrimarySelectedBorder: foundation.primary700,
   // Secondary
   buttonSecondaryFill: foundation.mono1000,
   buttonSecondaryText: foundation.mono200,
@@ -18,9 +31,6 @@ const getComponentColorTokens = (
   buttonSecondaryActiveFill: foundation.mono1000,
   buttonSecondaryActiveText: foundation.mono200,
   buttonSecondaryActiveBorder: foundation.mono500,
-  buttonSecondaryDisabledFill: foundation.mono1000,
-  buttonSecondaryDisabledText: foundation.mono500,
-  buttonSecondaryDisabledBorder: foundation.mono500,
   // Tertiary
   buttonTertiaryFill: foundation.mono1000,
   buttonTertiaryText: foundation.mono200,
@@ -34,9 +44,10 @@ const getComponentColorTokens = (
   buttonTertiarySelectedFill: foundation.mono800,
   buttonTertiarySelectedText: foundation.mono200,
   buttonTertiarySelectedBorder: foundation.mono800,
-  buttonTertiaryDisabledFill: foundation.mono1000,
-  buttonTertiaryDisabledText: foundation.mono500,
-  buttonTertiaryDisabledBorder: foundation.mono1000,
+  // Disabled
+  buttonDisabledFill: foundation.mono800,
+  buttonDisabledText: foundation.mono500,
+  buttonDisabledBorder: foundation.mono800,
 });
 
 export default getComponentColorTokens;

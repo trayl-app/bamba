@@ -2,7 +2,6 @@ export const VARIANT = Object.freeze({
   primary: 'primary',
   secondary: 'secondary',
   tertiary: 'tertiary',
-  invisible: 'invisible',
 });
 
 export const SIZE = Object.freeze({
